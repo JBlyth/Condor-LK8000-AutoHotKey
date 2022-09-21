@@ -5,7 +5,7 @@ return
 !0::s.ToggleSpeak(gst())	; Press Alt 0 to test ToggleSpeak()
 
 gst() {   ; GetSelectedText by Learning one 
-	FileRead, TextToSpeach, C:\Users\jblyt\OneDrive\Desktop\Condor\TaskRules.txt ; PATH AND NAME TO FILE
+	FileRead, TextToSpeach, C:\Users\xxxxxx\OneDrive\Desktop\Condor\TaskRules.txt ; PATH AND NAME TO FILE
 	ToReturn := TextToSpeach
 	Return ToReturn
 }
