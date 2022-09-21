@@ -2,6 +2,7 @@
 ;#WinActivateForce
 CoordMode,Mouse,Screen
 
+;Run after batch fuile called from CoTaCo starts LK8000 and CoTASA
 !'::
 IfWinExist ahk_exe LK8000-PC.EXE
 {
