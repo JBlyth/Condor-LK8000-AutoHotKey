@@ -1,4 +1,4 @@
-#SingleInstance force ; Control LK8000 from Condor 2 Joystick in VR or in Multi-Monitor Setup by John Blyth jblyth@cheerful.com
+#SingleInstance force ; Control LK8000 from Condor 2 Joystick in VR or in Multi-Monitor Setup by John Blyth
 ;#WinActivateForce
 CoordMode,Mouse,Screen
 
