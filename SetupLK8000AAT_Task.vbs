@@ -1,21 +1,21 @@
 'Script to copy flight plan on start of flight, change the Waypoint advance for AAT tasks to "ArmTPs", and start LK8000 once everything else has been completed
-' - John Blyth - jblyth@cheerful.com
+' - John Blyth 
 dim fso,PilotFolderFlightplan,FlightplanFolder,DestinationDir1, Data(1000), MapName, StartPoint, SourceFile, FirstWP
 Set WshShell = WScript.CreateObject("WScript.Shell")
 Set fso = CreateObject("Scripting.FileSystemObject")
-SourceFile = "C:\Users\jblyt\OneDrive\Documents\Condor\Pilots\Blyth_John\Flightplan.fpl"
+SourceFile = "C:\Users\xxxx\OneDrive\Documents\Condor\Pilots\Blyth_John\Flightplan.fpl"
 WorkATT
 WScript.Sleep 1000
 AutoStartFromCondor
 WScript.Sleep 1000
-t=WshShell.Run(chr(34) &"C:\Users\jblyt\OneDrive\Desktop\Condor\CondorStartLK8000.bat" &chr(34),7,false) 'NOTE:- running the startup of LK8000 shortcut seems to work much better from a batch file
+t=WshShell.Run(chr(34) &"C:\Users\xxxx\OneDrive\Desktop\Condor\CondorStartLK8000.bat" &chr(34),7,false) 'NOTE:- running the startup of LK8000 shortcut seems to work much better from a batch file
 WScript.Sleep 3000
 WshShell.sendkeys ("%'") 'Using AutoHotKey to bring Condor to the fore works better than the WshShell.AppActivate command
 WScript.Sleep 300
 wscript.quit
 
 sub AutoStartFromCondor()
- DestinationFile="C:\Users\jblyt\OneDrive\Documents\Condor\FlightPlans\LK-" &MapName &"_" &FirstWP &"_" &right("0" &day(date),2) &right("0" &month(date),2) &year(date) &".fpl"
+ DestinationFile="C:\Users\xxxx\OneDrive\Documents\Condor\FlightPlans\LK-" &MapName &"_" &FirstWP &"_" &right("0" &day(date),2) &right("0" &month(date),2) &year(date) &".fpl"
  'MSGBOX SourceFile &"  " &DestinationFile
  fso.CopyFile SourceFile, DestinationFile
 end sub
@@ -30,7 +30,7 @@ MapName=MyFile1.readline
 MapName = mid(MapName,instr(1,MapName,"=")+1, 200)
 'msgbox MapName
 MyFile1.close
-SourceDir2 = "C:\Users\jblyt\Onedrive\LK8000\_Tasks\Default.lkt"
+SourceDir2 = "C:\Users\xxxx\Onedrive\LK8000\_Tasks\Default.lkt"
 set Myfile2=fso.OpenTextFile(SourceDir2,1)
 n=1
 x=0
