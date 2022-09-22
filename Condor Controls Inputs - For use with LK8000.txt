@@ -1,0 +1,118 @@
+Bank Left            Left
+Bank Right           Right
+Pitch Up             Up
+Pitch Down           Down
+Trimmer Up           Del
+Trimmer down         Ins
+Gear                 G
+Wheel brake          .
+Release              R
+Water                W
+View pan left        4 (NumPad)
+View pan right       6 (NumPad)
+View pan up          2 (NumPad)
+View pan down        8 (NumPad)
+View reset           5 (NumPad)
+Zoom in              + (NumPad)
+Zoom out             - (NumPad)
+Game menu            Esc
+Pause / Autopilot    P
+Miracle              Q
+Send message         BackSpace
+Show classification  C
+Show icons           * (NumPad)
+HUD toggle           `
+Extend chat log      D
+Cockpit view         F1
+External view        F2
+Chase view           F3
+Tower view           F4
+Towplane view        F5
+Fly-by view          F6
+Padlock view         F7
+Net player view      F8
+Replay camera        F9
+PDA screen 1         1
+PDA screen 2         2
+PDA screen 3         3
+PDA screen 4         4
+PDA next screen      M
+PDA zoom in          PgUp
+PDA zoom out         PgDwn
+Lift/Cruise toggle   Right Ctrl
+MC Up                Home
+MC Down              End
+Vario volume up      ]
+Vario volume down    [
+Altimeter up         =
+Altimeter down       -
+Task helpers         J
+Extract Motor        K
+Start Motor          L
+Start Flight         Space
+Rudder Left          Unassigned                                        
+Rudder Right         Unassigned                                        
+Rudder Center        Unassigned                                        
+Trimmer center       Unassigned                                        
+Airbrakes in         Unassigned                                        
+Airbrakes out        Unassigned                                        
+Flaps up             Unassigned                                        
+Flaps down           Unassigned                                        
+Smoke                Unassigned                                        
+View snap left       Unassigned                                        
+View snap right      Unassigned                                        
+Panel zoom           Unassigned                                        
+Screenshot           Unassigned                                        
+Radio frequency up   Unassigned                                        
+Radio frequency down Unassigned                                        
+G Meter reset        Unassigned                                        
+Lift helpers         Unassigned                                        
+Check Time           Unassigned                                        
+Throttle Up          Unassigned                                        
+Throttle Down        Unassigned                                        
+Unassigned           5                            
+Unassigned           6                            
+Unassigned           7                            
+Unassigned           8                            
+Unassigned           9                            
+Unassigned           0                            
+Unassigned           Tab                          
+Unassigned           E                            
+Unassigned           T                            
+Unassigned           Y                            
+Unassigned           U                            
+Unassigned           I                            
+Unassigned           O                            
+Unassigned           Enter                        
+Unassigned           Left Ctrl                    
+Unassigned           S                            
+Unassigned           F                            
+Unassigned           H                            
+Unassigned           ;                            
+Unassigned           '                            
+Unassigned           Left Shift                   
+Unassigned           \                            
+Unassigned           Z                            
+Unassigned           X                            
+Unassigned           V                            
+Unassigned           B                            
+Unassigned           N                            
+Unassigned           ,                            
+Unassigned           /                            
+Unassigned           Right shift                  
+Unassigned           Alt                          
+Unassigned           ShiftLock                    
+Unassigned           F10                          
+Unassigned           NumLock                      
+Unassigned           7 (NumPad)                   
+Unassigned           9 (NumPad)                   
+Unassigned           1 (NumPad)                   
+Unassigned           3 (NumPad)                   
+Unassigned           0 (NumPad)                   
+Unassigned           . (NumPad)                   
+Unassigned           <                            
+Unassigned           F11                          
+Unassigned           F12                          
+Unassigned           Enter (NumPad)               
+Unassigned           / (NumPad)                   
+Unassigned           Alt Gr                       
