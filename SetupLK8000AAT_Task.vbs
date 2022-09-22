@@ -1,27 +1,33 @@
 'Script to copy flight plan on start of flight, change the Waypoint advance for AAT tasks to "ArmTPs", and start LK8000 once everything else has been completed
-' - John Blyth 
-dim fso,PilotFolderFlightplan,FlightplanFolder,DestinationDir1, Data(1000), MapName, StartPoint, SourceFile, FirstWP
+' - John Blyth - jblyth@cheerful.com
+'YOU MUST Modify Lines 7 and 8 to suit your Condor Folders
+dim fso,Data(1000), MapName, StartPoint, CondorFlightPlanCondorFlightPlanSourceFile, FirstWP,DestinationFile,CondorFlightPlanFolder
 Set WshShell = WScript.CreateObject("WScript.Shell")
 Set fso = CreateObject("Scripting.FileSystemObject")
-SourceFile = "C:\Users\xxxx\OneDrive\Documents\Condor\Pilots\Blyth_John\Flightplan.fpl"
+CondorFlightPlanCondorFlightPlanSourceFile = "Path to your Flight PLan file. Default name is Flightplan.fpl"
+CondorFlightPlanFolder="PAth to your FlightPlans FOLDER" 'DO NOT a trailing \ at the end of the folder name!
+if instr(1,CondorFlightPlanCondorFlightPlanSourceFile,"\")=0 or instr(1,CondorFlightPlanFolder,"\")=0 then
+ msgbox "You MUST setup you the variables on lines 7 and 8 of this script to suit your Condor installation first!" &VbCrLf &VbCrLf &"QUITTING NOW!"
+ Wscript.quit
+end if
 WorkATT
 WScript.Sleep 1000
 AutoStartFromCondor
 WScript.Sleep 1000
-t=WshShell.Run(chr(34) &"C:\Users\xxxx\OneDrive\Desktop\Condor\CondorStartLK8000.bat" &chr(34),7,false) 'NOTE:- running the startup of LK8000 shortcut seems to work much better from a batch file
+t=WshShell.Run(chr(34) &"C:\Users\jblyt\OneDrive\Desktop\Condor\CondorStartLK8000.bat" &chr(34),7,false) 'NOTE:- running the startup of LK8000 shortcut seems to work much better from a batch file
 WScript.Sleep 3000
 WshShell.sendkeys ("%'") 'Using AutoHotKey to bring Condor to the fore works better than the WshShell.AppActivate command
 WScript.Sleep 300
 wscript.quit
 
 sub AutoStartFromCondor()
- DestinationFile="C:\Users\xxxx\OneDrive\Documents\Condor\FlightPlans\LK-" &MapName &"_" &FirstWP &"_" &right("0" &day(date),2) &right("0" &month(date),2) &year(date) &".fpl"
- 'MSGBOX SourceFile &"  " &DestinationFile
- fso.CopyFile SourceFile, DestinationFile
+ DestinationFile=CondorFlightPlanFolder &"\LK-" &MapName &"_" &FirstWP &"_" &right("0" &day(date),2) &right("0" &month(date),2) &year(date) &".fpl"
+ 'MSGBOX CondorFlightPlanCondorFlightPlanSourceFile &"  " &DestinationFile
+ fso.CopyFile CondorFlightPlanCondorFlightPlanSourceFile, DestinationFile
 end sub
 
 sub WorkATT()
-set Myfile1=fso.OpenTextFile(SourceFile,1)
+set Myfile1=fso.OpenTextFile(CondorFlightPlanCondorFlightPlanSourceFile,1)
 a=MyFile1.readline
 a=MyFile1.readline
 a=MyFile1.readline
@@ -30,7 +36,7 @@ MapName=MyFile1.readline
 MapName = mid(MapName,instr(1,MapName,"=")+1, 200)
 'msgbox MapName
 MyFile1.close
-SourceDir2 = "C:\Users\xxxx\Onedrive\LK8000\_Tasks\Default.lkt"
+SourceDir2 = "C:\Users\jblyt\Onedrive\LK8000\_Tasks\Default.lkt"
 set Myfile2=fso.OpenTextFile(SourceDir2,1)
 n=1
 x=0
