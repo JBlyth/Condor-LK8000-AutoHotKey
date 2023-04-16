@@ -43,7 +43,7 @@ IfWinExist ahk_exe LK8000-PC.EXE
 ;FileAppend, LK8000 Started, C:\Users\jblyt\LK8000.txt
 ;}
 }
-Return
+Return 
 
 ;Next Waypoint - Menu/Nav/Waypoint Next
 !S::
