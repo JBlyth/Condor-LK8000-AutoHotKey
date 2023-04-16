@@ -18,8 +18,6 @@ WinSet, Style, -0xC00000, LK800
 !'::
 IfWinExist ahk_exe LK8000-PC.EXE
 {
- ;if !FileExist("C:\Users\jblyt\LK8000.txt")
- ;{
  CoordMode,Mouse,Screen
  WinGetPos, X, Y, W, H, LK8000
  Horz:=X+(W*.1)
